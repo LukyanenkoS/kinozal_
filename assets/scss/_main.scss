@@ -1,0 +1,154 @@
+        .main {
+            @extend %margin-bottom;
+            .site-search {
+                margin: -$gap 0 ($gap * 3);
+            }
+            .user-login {
+                margin-bottom: $gap * 4;
+            }
+        }
+        
+        .new-films {
+            position: relative;
+            overflow: hidden;
+            &-row {
+                margin-right: -$gap / 2;
+                margin-left: -$gap / 2;
+                margin-bottom: -$gap;
+            }
+            &-item {
+                display: block;
+                overflow: hidden;
+                margin-bottom: $gap;
+                padding-right: $gap / 2;
+                padding-left: $gap / 2;
+                &__title {
+                    @include text-shortener;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                &__thumbnail {
+                    margin-bottom: 0;
+                }
+                &__caption {
+                    text-align: center;
+                }
+            }
+        }
+        
+        .top-week {
+            position: relative;
+            overflow: hidden;
+            &-row {
+                margin-right: -$gap / 2;
+                margin-left: -$gap / 2;
+            }
+            &-item {
+                display: block;
+                overflow: hidden;
+                margin-bottom: $gap;
+                padding-right: $gap / 2;
+                padding-left: $gap / 2;
+                &__title {
+                    @include text-shortener;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                &__thumbnail {
+                    margin-bottom: 0;
+                }
+                &__caption {
+                    text-align: center;
+                }
+            }
+        }
+        
+        .new-films-item:hover .thumbnail,
+        .top-week-item:hover .thumbnail {
+            border-color: $color-accent;
+            background-color: $color-accent;
+        }
+        
+        .new-films-item:hover h3,
+        .top-week-item:hover h3 {
+            color: $color-light;
+        }
+        
+        .film-news {
+            position: relative;
+            overflow: hidden;
+            &-item .thumbnail {
+                margin-bottom: 0;
+                transition: background-color 0.25s;
+            }
+            &-item {
+                display: block;
+                &__thumbnail {
+                    margin-bottom: 0;
+                    transition: background-color 0.5s;
+                }
+                &__image {
+                    width: 100%;
+                }
+                &__button {
+                    float: right;
+                    margin-bottom: 30px;
+                    transition: background-color 0.25s;
+                }
+            }
+        }
+        
+        img {
+            vertical-align: middle;
+            border: 0;
+        }
+        
+        .carousel-inner>.item>a>img,
+        .carousel-inner>.item>img,
+        .img-responsive,
+        .thumbnail a>img,
+        .thumbnail>img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .thumbnail a>img,
+        .thumbnail>img {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .film-news-item:hover .thumbnail {
+            background-color: #f0ad4f;
+        }
+        
+        .film-news-item:hover h3>a {
+            color: $color-accent;
+        }
+        
+        .film-news-item:hover .btn-warning {
+            background-color: $color-accent;
+        }
+        
+        .new-films-item__image,
+        .top-week-item__image {
+            width: 100%;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        
+        img {
+            border: 0;
+            margin: 0;
+        }
+        
+        .film-news-item__text {
+            text-align: justify;
+        }
